@@ -1,5 +1,5 @@
 import React from 'react';
-import {Switch} from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 
 import Route from './route';
 
@@ -15,10 +15,10 @@ import Legislation from '../pages/legislation';
 /* precisa de autenticação */
 import Dashboard from '../pages/dashboard';
 
-export default function Routes(){
-  return(
+export default function Routes() {
+  return (
     <Switch>
-      <Route path="/" exact component={Home} />
+      <Route path="/" exact component={SignIn} />
       <Route path="/contact" component={Contact} />
       <Route path="/plans" component={Plans} />
       <Route path="/signin" component={SignIn} />

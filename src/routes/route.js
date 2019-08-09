@@ -2,8 +2,8 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import AuthLayout from '../_layouts/auth';
-import NoAuthLayout from '../_layouts/noAuth';
+import AuthLayout from '../pages/_layouts/auth';
+import NoAuthLayout from '../pages/_layouts/noAuth';
 
 export default function RouteWrapper({
   component: Component,
@@ -12,7 +12,7 @@ export default function RouteWrapper({
 }) {
   const signed = false;
 
-   /* se o usuario não estiver logado e tentar acessar uma rota privada
+  /* se o usuario não estiver logado e tentar acessar uma rota privada
   ele é redirecionado para a tela de login */
   if (!signed && isPrivate) {
     return <Redirect to="/" />;

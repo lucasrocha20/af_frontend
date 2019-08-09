@@ -1,7 +1,12 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import { Container } from './styles';
+import StaticHeader from '../../components/StaticHeader';
 
 export default function home() {
-  return <h1>Home</h1>;
+  return (
+    <Container>
+      <StaticHeader />
+    </Container>
+  );
 }

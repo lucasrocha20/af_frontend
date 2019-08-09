@@ -1,23 +1,31 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-// import { Container } from './styles';
+import logo from '../../assets/icons/logo.svg';
+
+import { Container, Navigation, Spacer } from './styles';
 
 export default function StaticHeader() {
   return (
     <header>
-      <div>
-        <nav>
-          <h1><a href="#">Avalie Fácil</a></h1>
+      <Container>
+        <h1>
+          <Link to="/">
+            <img src={logo} alt="Avalie Fácil" />
+          </Link>
+        </h1>
+        <Spacer />
+        <Navigation>
           <ul>
-            <li><a href="#"></a>Home</li>
-            <li><a href="#"></a>Sobre</li>
-            <li><a href="#"></a>Legislação</li>
-            <li><a href="#"></a>Planos</li>
-            <li><a href="#"></a>Contato</li>
-            <li><a href="#"></a>Login</li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/signin">Entrar</Link>
+            </li>
           </ul>
-        </nav>
-      </div>
+        </Navigation>
+      </Container>
     </header>
   );
 }
