@@ -11,12 +11,13 @@ const schema = Yup.object().shape({
   email: Yup.string()
     .email('Insira um email válido!')
     .required('O e-mail é obrigatório!'),
-  lastName: Yup.string().required('O sobrenome é obrigatório'),
+  name: Yup.string().required('O Nome é obrigatório!'),
+  lastName: Yup.string().required('O sobrenome é obrigatório!'),
   mobile: Yup.string(),
   cpf: Yup.string().required('O CPF é obrigatório!'),
   password: Yup.string()
-    .min(6, 'No mínimo 6 caracteres')
-    .required('A senha é obrigatória'),
+    .min(6, 'No mínimo 6 caracteres!')
+    .required('A senha é obrigatória!'),
   confirmPassword: Yup.string().when('password', (password, field) =>
     password
       ? field
@@ -26,7 +27,7 @@ const schema = Yup.object().shape({
   ),
 });
 
-export default function signUp() {
+export default function SignUp() {
   function handleSubmit(data) {
     console.tron.log(data);
   }
