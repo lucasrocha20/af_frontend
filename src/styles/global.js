@@ -16,6 +16,10 @@ export default createGlobalStyle`
     height: 100%;
   }
 
+  #root {
+    min-height: 100%;
+  }
+
   body {
     background: white;
     font-family: 'Montserrat','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   height: 100%;
+  min-height: 100vh;
   background: linear-gradient(-180deg, white, #0d2c5b);
   justify-content: center;
 `;
